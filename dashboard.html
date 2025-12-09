@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Liviaa Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>LIVIAA SHOP</h1>
+                <p>Premium Liquid Glass</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Produk</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="#profile">Profil</a>
+                <a href="#orders">Pesanan</a>
+                <button class="btn-login" onclick="logoutUser()">Logout</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1>Dashboard Pengguna</h1>
+            <p class="user-welcome">Selamat datang, <span id="username">Demo User</span>!</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Stats -->
+    <section class="dashboard-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-box"></i>
+                    <h3 id="totalProducts">10</h3>
+                    <p>Total Produk</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3 id="totalOrders">24</h3>
+                    <p>Total Pesanan</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="totalVisitors">156</h3>
+                    <p>Pengunjung</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 id="totalRevenue">Rp 4.250.000</h3>
+                    <p>Total Pendapatan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Profile -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Informasi Akun</h2>
+            <div class="login-box" style="max-width: 800px; margin: 0 auto;">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" value="demo_user" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" value="demo@liviaashop.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Member Since</label>
+                    <input type="text" class="form-control" value="01 Januari 2024" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <input type="text" class="form-control" value="Active Member" readonly style="color: #4CAF50;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>LIVIAA SHOP</h2>
+                    <p>Premium Liquid Glass Protection</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Produk</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> info@liviaashop.com</p>
+                    <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Liviaa Shop. All rights reserved. | Tema Blackpink Edition</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Load dashboard stats
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardStats();
+        });
+    </script>
+</body>
+</html>
